@@ -1,4 +1,4 @@
-# Laboratirio 3 
+# Laboratorio 3 
 
 i18n
 
