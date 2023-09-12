@@ -28,7 +28,7 @@ export default {
   display: flex;
   flex-direction: column;
   border: #222222;
-  background-color: red;
+  background-color: orangered;
   margin: 8px;
   padding: 8px;
 }

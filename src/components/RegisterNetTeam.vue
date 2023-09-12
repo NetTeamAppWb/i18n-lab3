@@ -1,9 +1,16 @@
-<script>
+<script >
+
+import { ref } from 'vue';
+
+const value = ref(null);
+const checked = ref(false);
 export default {
+
   props:{
     title:String
   },
   name: "register"
+
 }
 </script>
 
@@ -13,26 +20,31 @@ export default {
     <div class="control">
       <label for="name"> First Name :</label>
       <input type="text" id="name">
+      <Checkbox :binary="true" />
     </div>
     <div class="control">
       <label for="shortname"> Last Name :</label>
       <input type="text" id="shortname">
+      <Checkbox :binary="true" />
     </div>
     <div class="control">
       <label for="identity">DNI :</label>
       <input type="number" id="identity">
+      <Checkbox :binary="true" />
     </div>
     <div class="control">
       <label for="email">Email address:</label>
       <input type="email" id="email" placeholder="youremail@gmail.com" required>
+      <Checkbox :binary="true" />
     </div>
     <div class="control">
       <label for="date">Date :</label>
-      <input type="date" id="date">
+      <Calendar type="date" id="date"/>
+      <Checkbox v-model="checked" :binary="true" />
     </div>
+    <Rating/>
     <button>Save</button>
   </div>
-
 </template>
 
 <style scoped>
