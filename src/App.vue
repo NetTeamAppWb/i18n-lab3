@@ -1,47 +1,21 @@
 <script setup>
-import WelcomeNetTeam from "@/components/WelcomeNetTeam.vue";
-import DescriptionNet from "@/components/DescriptionNet.vue";
+import Home from "@/components/HomeNetTeam.vue";
 </script>
 
 <template>
   <header>
-    <img alt="NetTeamLogo" class="logo" src="./assets/logoNetTeam.png" width="340" height="210" />
-
-    <div class="wrapper">
-      <WelcomeNetTeam msg="Hello user" />
-    </div>
+    {{$t('greet',{user:'Jesus'})}}
   </header>
 
   <main>
-    <DescriptionNet />
+    <Home :register="[{}]"/>
   </main>
 </template>
 
 <style scoped>
 header {
-  line-height: 1.5;
+  line-height: 10;
+  font-size: 30px;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
