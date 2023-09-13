@@ -21,27 +21,13 @@ export default {
 </script>
 
 <template>
-  <div class="table-container">
-    <table class="custom-table">
-      <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>City</th>
-        <th>Company</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr v-for="user in users" :key="user.id">
-        <td>{{ user.id }}</td>
-        <td>{{ user.name }}</td>
-        <td>{{ user.email }}</td>
-        <td>{{ user.address.city }}</td>
-        <td>{{ user.company.name }}</td>
-      </tr>
-      </tbody>
-    </table>
+  <div class="card">
+    <DataTable :value="users" tableStyle="min-width: 50rem">
+      <Column field="id" header="Id"></Column>
+      <Column field="name" header="Name"></Column>
+      <Column field="address.city" header="City"></Column>
+      <Column field="company.name" header="company"></Column>
+    </DataTable>
   </div>
 </template>
 

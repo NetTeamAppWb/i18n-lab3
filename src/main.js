@@ -10,6 +10,9 @@ import Checkbox from 'primevue/checkbox';
 import Rating from 'primevue/rating';
 import Button from 'primevue/button';
 
+import DataTable from 'primevue/datatable';
+import Column from 'primevue/column';
+
 import 'primeicons/primeicons.css'
 import "primevue/resources/themes/mdc-light-indigo/theme.css"
 import 'primevue/resources/primevue.min.css' //core css
@@ -26,5 +29,7 @@ app.component('Calendar',Calendar);
 app.component('Checkbox',Checkbox);
 app.component('Rating',Rating);
 app.component('Button',Button);
+app.component('DataTable',DataTable);
+app.component('Column',Column);
 
 app.mount('#app')
