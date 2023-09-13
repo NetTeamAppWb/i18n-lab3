@@ -7,7 +7,7 @@ export default {
     content: String,
     register: Array
   },
-  name: "home"
+  name: "home-netteam"
 }
 </script>
 
@@ -36,6 +36,7 @@ export default {
   font-weight: bold;
   font-size: large;
   color: black;
+  margin: 10px;
 }
 .content{
   color: black;

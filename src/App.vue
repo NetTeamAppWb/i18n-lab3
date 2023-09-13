@@ -7,9 +7,17 @@ import Home from "@/components/HomeNetTeam.vue";
     {{$t('greet',{user:'Jesus'})}}
   </header>
 
+  <nav>
+    <router-link to="/">{{$t("homepage")}}</router-link>
+    <router-link to="/home">NetTeam</router-link>
+    <router-link to="/register">{{$t("registernet")}}</router-link>
+    <router-link to="/users">{{$t("users")}}</router-link>
+  </nav>
+
   <main>
-    <Home :register="[{}]"/>
+    <router-view></router-view>
   </main>
+
 </template>
 
 <style scoped>
